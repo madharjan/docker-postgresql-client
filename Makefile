@@ -48,6 +48,7 @@ stop:
 
 clean: stop
 	docker rm postgresql_client 2> /dev/null || true
+	docker ps -a | grep "Exited" | awk '{print$$1}' | xargs docker rm 2> /dev/null || true
 	docker images | grep "<none>" | awk '{print$3 }' | xargs docker rmi 2> /dev/null || true
 
 publish: docker_login run test clean

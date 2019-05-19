@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.com/madharjan/docker-postgresql-client.svg?branch=master)](https://travis-ci.com/madharjan/docker-postgresql-client)
 [![Layers](https://images.microbadger.com/badges/image/madharjan/docker-postgresql-client.svg)](http://microbadger.com/images/madharjan/docker-postgresql-client)
 
-Docker container with PostgreSQL Client Server based on [gliderlabs/alpine](https://github.com/gliderlabs/docker-alpine/)
+Docker container with PostgreSQL Client based on [gliderlabs/alpine](https://github.com/gliderlabs/docker-alpine/)
 
 ## Features
 
