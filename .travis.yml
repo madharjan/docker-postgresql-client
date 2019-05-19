@@ -1,0 +1,17 @@
+
+branches:
+  only:
+  - master
+
+dist: trusty
+language: minimal
+
+jobs:
+  include:
+    - stage: release
+      script:
+      - echo "${DOCKER_PASSWORD}" | docker login -u "${DOCKER_USERNAME}" --password-stdin
+      - make build DEBUG=false
+      - make tag_latest DEBUG=false
+      - make release DEBUG=false
+      - curl -s -X POST "https://hooks.microbadger.com/images/${TRAVIS_REPO_SLUG}/AG15xvvq_g10B9tU3v8EB9E9eco="
