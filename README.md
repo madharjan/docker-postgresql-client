@@ -28,8 +28,6 @@ Docker container with PostgreSQL Client based on [gliderlabs/alpine](https://git
 git clone https://github.com/madharjan/docker-postgresql-client
 cd docker-postgresql-client
 
-# login to DockerHub
-docker login
 
 # build
 make
@@ -81,5 +79,4 @@ docker run --rm -it \
 ```bash
 docker stop postgresql
 docker rm postgresql
-
-``
+```
